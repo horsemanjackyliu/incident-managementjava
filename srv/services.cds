@@ -1,5 +1,9 @@
 using { sap.capire.incidents as my } from '../db/schema';
 
+using {sap.attachments.Attachments} from `com.sap.cds/sdm`;
+
+
+
 
 service ProcessorService { 
     entity Incidents as projection on my.Incidents;
@@ -7,6 +11,12 @@ service ProcessorService {
     @readonly
     entity Customers as projection on my.Customers;
 }
+
+
+extend my.Incidents with {
+  attachments: Composition of many Attachments
+};
+
 
 
     annotate ProcessorService.Incidents with @odata.draft.enabled;

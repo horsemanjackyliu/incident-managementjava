@@ -1,5 +1,7 @@
 using ProcessorService as service from '../../srv/services';
 using from '../../db/schema';
+using from '../../srv/services';
+
 
 annotate service.Incidents with @(
     UI.FieldGroup #GeneratedGroup : {
@@ -39,6 +41,12 @@ annotate service.Incidents with @(
                     Label : '{i18n>Conversation}',
                     ID : 'i18nConversation',
                     Target : 'conversation/@UI.LineItem#i18nConversation',
+                },
+                {
+                    $Type : 'UI.ReferenceFacet',
+                    Label : '{i18n>Attachments}',
+                    ID : 'i18nAttachments',
+                    Target : 'attachments/@UI.LineItem#i18nAttachments',
                 },
             ],
         },
@@ -179,6 +187,32 @@ annotate service.Incidents.conversation with @(
             $Type : 'UI.DataField',
             Value : timestamp,
             Label : '{i18n>Date}',
+        },
+    ]
+);
+
+annotate service.Incidents.attachments with @(
+    UI.LineItem #i18nAttachments : [
+        {
+            $Type : 'UI.DataField',
+            Value : fileName,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : content,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : createdAt,
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : createdBy,
         },
     ]
 );

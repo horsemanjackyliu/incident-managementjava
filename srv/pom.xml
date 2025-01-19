@@ -12,6 +12,14 @@
 
 	<name>incident-management</name>
 
+	  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
 	<!-- ACTUAL DEPENDENCIES -->
 	<dependencies>
 		<!-- CDS SPRING BOOT STARTER -->
@@ -63,6 +71,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.sap.cds</groupId>
+			<artifactId>sdm</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

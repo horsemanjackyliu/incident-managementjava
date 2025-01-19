@@ -9,5 +9,10 @@
   ],
   "devDependencies": {
     "@sap/cds-dk": "^8"
+  },
+  "cds": {
+    "requires": {
+      "workzone": true
+    }
   }
 }
