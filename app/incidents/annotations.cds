@@ -200,7 +200,7 @@ annotate service.Incidents.attachments with @(
         {
             $Type : 'UI.DataField',
             Value : ID,
-            Label : 'ID',
+            Label : '{i18n>Id}',
         },
         {
             $Type : 'UI.DataField',
