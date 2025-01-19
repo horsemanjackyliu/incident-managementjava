@@ -42,12 +42,12 @@ annotate service.Incidents with @(
                     ID : 'i18nConversation',
                     Target : 'conversation/@UI.LineItem#i18nConversation',
                 },
-                {
+                   {
                     $Type : 'UI.ReferenceFacet',
-                    Label : '{i18n>Attachments}',
-                    ID : 'i18nAttachments',
-                    Target : 'attachments/@UI.LineItem#i18nAttachments',
-                },
+                    ID     : 'AttachmentsFacet',
+                    Label : '{i18n>attachments}',
+                    Target: 'attachments/@UI.LineItem'
+                }
             ],
         },
     ],

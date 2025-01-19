@@ -19,7 +19,8 @@ extend my.Incidents with {
 
 
 
-   annotate ProcessorService.Incidents with @odata.draft.enabled;
+   annotate ProcessorService.Incidents with @odata.draft.enabled @fiori.draft.enabled;
+  
 
     annotate ProcessorService with @(requires: 'support');
 
