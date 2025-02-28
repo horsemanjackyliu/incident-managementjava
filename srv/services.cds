@@ -22,7 +22,7 @@ extend my.Incidents with {
    annotate ProcessorService.Incidents with @odata.draft.enabled @fiori.draft.enabled;
   
 
-    annotate ProcessorService with @(requires: 'support');
+    // annotate ProcessorService with @(requires: 'support');
 
 /**
  * Service used by administrators to manage customers and incidents.
@@ -35,5 +35,5 @@ service AdminService {
 
 
 
-    annotate AdminService with @(requires: 'admin');
+    // annotate AdminService with @(requires: 'admin');
     
